@@ -1,0 +1,13 @@
+@import "./../../sass/variables";
+@import "./../../sass/mixins";
+
+.todosList {
+  margin: 1rem auto 0 auto;
+  list-style: none;
+  padding: 1rem 0;
+  width: 80%;
+  min-height: 20rem;
+  @include responsive(phone) {
+    width: 100%;
+  }
+}

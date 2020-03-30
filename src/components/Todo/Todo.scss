@@ -1,0 +1,54 @@
+@import "./../../sass/variables";
+@import "./../../sass/mixins";
+
+.todo {
+  background: #ffff;
+  padding: 0 1rem;
+  height: 4rem;
+  @include flexJustifyContentSpaceBetween;
+  align-items: center;
+  margin: 1rem 0;
+  color: $black;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 1rem;
+  @include responsive(phone) {
+    font-size: 0.8rem;
+  }
+  & div {
+    display: flex;
+    width: 3rem;
+    display: flex;
+    justify-content: space-between;
+    height: 2rem;
+    align-items: center;
+    @include responsive(phone) {
+      width: 2.5rem;
+    }
+    & button {
+      width: 1rem;
+      height: 1rem;
+      border: none;
+      background: transparent;
+      &:hover {
+        cursor: pointer;
+      }
+      &:focus {
+        outline: none;
+      }
+      & i {
+        color: $white;
+        color: $primary-color;
+      }
+    }
+  }
+  & form {
+    display: flex;
+    @include flexJustifyContentSpaceBetween;
+    width: 100%;
+    & input {
+      width: 80%;
+      @include input;
+    }
+  }
+}

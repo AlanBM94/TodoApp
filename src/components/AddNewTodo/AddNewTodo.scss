@@ -1,0 +1,34 @@
+@import "./../../sass/variables";
+@import "./../../sass/mixins";
+
+.newTodo {
+  margin-top: 1rem;
+  width: 80%;
+  margin: 2rem auto 0 auto;
+  height: 4rem;
+  @include flexJustifyContentSpaceBetweenAlignItemsCenter;
+  @include responsive(phone) {
+    width: 100%;
+  }
+  &__input {
+    width: 70%;
+    @include input;
+  }
+  &__button {
+    width: 20%;
+    height: 2rem;
+    border: none;
+    background: $primary-color;
+    color: $white;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    &:hover {
+      cursor: pointer;
+      background: $primary-hover-color;
+    }
+    &:focus {
+      cursor: pointer;
+      outline: none;
+    }
+  }
+}
