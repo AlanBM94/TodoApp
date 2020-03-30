@@ -14,6 +14,7 @@ const AddNewTodo = () => {
     };
     addNewTask(newTask);
   };
+  
 
   const validateTask = () => {
     if (inputState === "") {
